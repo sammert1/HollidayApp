@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+
 
 //screens
 import '../navigation/screens/Home.css';

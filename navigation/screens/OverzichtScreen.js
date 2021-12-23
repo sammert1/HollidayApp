@@ -1,15 +1,17 @@
-// import * as React from 'react';
-import {StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
+import Countdown from 'react-countdown'
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 
 
-export default function HomeScreen ({navigation}) {
+export default function DetailsScreen ({navigation}) {
+
 
   const [data, setData] = useState();
   const [loading, toggleLoading] = useState(false);
   const [error, setError] = useState(false);
   const endpoint = 'https://opendata.rijksoverheid.nl/v1/sources/rijksoverheid/infotypes/schoolholidays/schoolyear/2021-2022?output=json'
+
 
 useEffect(() => {
   async function fetchData () {
@@ -21,8 +23,6 @@ useEffect(() => {
     try {
     const vakantieData = await axios.get(endpoint);
     setData (vakantieData.data);
-    console.log ('*********');
-    console.log ( vakantieData );
   }
     catch(e) {
       console.error(e);
@@ -34,31 +34,76 @@ useEffect(() => {
 
  }
  fetchData();
+
+
 }, [endpoint]);
 
+
     return(
-        <div>
-         {loading && <p>Loading</p>}
-         {error && <p>er is een error opgetreden bij het ophalen van de data</p>}
-           
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <Text
-                    onPress={() => alert('this is the "Home" screen.')}
-                    style={{ fontSize: 26, fontWeight: 'bold'}}>Overzicht Screen</Text>
-            </View>
-             {data && <>
-               <Text>
-                <h2>
-                    {data.id}
-                </h2>
-                <h2>
-                    {data.content[0].vacations[0].regions[0].startdate}
-                </h2>
-                <h1>Een mooie vakantie App</h1></Text>
-                
-            </>
-            }
+
+      <div>
+        {loading && <p>Loading</p>}
+        {error && <p>er is een error opgetreden bij het ophalen van de data</p>}
+        {data && <>
+
+            <div id="Herfst">
+        <span>Nog </span>
+        <Countdown 
+            date={new Date(data.content[0].vacations[0].regions[0].startdate).getTime()}
+        />  
+        
+        <span> dagen tot:</span>
+        <br></br><br></br>
         </div>
+
+        <div id="Kerst">
+        <span>Nog </span>
+        <Countdown 
+            date={new Date(data.content[0].vacations[1].regions[0].startdate).getTime()}
+        />  
+        
+        <span> dagen tot:</span>
+        <br></br><br></br>
+        </div>
+
+        <div id="Voorjaar">
+        <span>Nog </span>
+        <Countdown 
+            date={new Date(data.content[0].vacations[2].regions[0].startdate).getTime()}
+        />  
+        
+        <span> dagen tot:</span>
+        <br></br><br></br>
+        </div>
+
+        <div id="Mei">
+        <span>Nog </span>
+        <Countdown 
+            date={new Date(data.content[0].vacations[3].regions[0].startdate).getTime()}
+        />  
+        
+        <span> dagen tot:</span>
+        <br></br><br></br>
+        </div>
+
+        <div id="Zomer">
+        <span>Nog </span>
+        <Countdown 
+            date={new Date(data.content[0].vacations[4].regions[0].startdate).getTime()}
+        />  
+        
+        <span> dagen tot:</span>
+        </div>
+
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <Text
+                onPress={() => navigation.navigate('Home')}
+                style={{ fontSize: 26, fontWeight: 'bold'}}>
+                </Text>
+        </View>
+        </>
+        }
+        </div>
+
     );
 }
-

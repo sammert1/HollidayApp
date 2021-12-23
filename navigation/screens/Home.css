@@ -3,6 +3,7 @@
     font-size: 16;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -10,6 +11,7 @@
 .Herfst{
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 .Kerst{
@@ -30,4 +32,39 @@
 .Zomer{
     display: flex;
     flex-direction: row;
+}
+
+#Herfst{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+
+}
+
+#Kerst{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+
+}
+
+#Voorjaar{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+
+}
+
+#Mei{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+
+}
+
+#Zomer{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+
 }

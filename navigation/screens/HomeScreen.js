@@ -53,12 +53,11 @@ useEffect(() => {
               
                <h1>Data van de vakantieperioden 2021</h1></Text>
 
-                <Text >
+                <Text>
                 <h2>
                     {data.content[0].vacations[0].type}
                 </h2>
                 </Text>
-
                 <div className='Herfst'>
                 <Text>
                     <h4>{data.content[0].vacations[0].regions[0].region}<br></br></h4>
