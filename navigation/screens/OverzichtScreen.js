@@ -2,7 +2,6 @@ import { View, Image, StyleSheet, Text } from 'react-native';
 import Countdown from 'react-countdown'
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-// import herfst from '../../assets/herfst.png';
 
 
 
@@ -53,7 +52,6 @@ useEffect(() => {
         <Countdown 
             date={new Date(data.content[0].vacations[0].regions[0].startdate).getTime()}
         />  
-        <Image source={require('../../assets/herfst.png')} />
         
 
         <span> dagen tot:</span> 
