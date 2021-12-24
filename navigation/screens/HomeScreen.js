@@ -52,10 +52,9 @@ useEffect(() => {
                <Text>
               
                <h1>Data van de vakantieperioden 2021</h1></Text>
-
                 <Text>
                 <h2>
-                    {data.content[0].vacations[0].type}
+                    Herfstvakantie
                 </h2>
                 </Text>
                 <div className='Herfst'>
@@ -65,19 +64,19 @@ useEffect(() => {
                     Tot: {data.content[0].vacations[0].regions[0].enddate}<br></br>
                 </Text>
                 <Text>
-                    <h4>{data.content[0].vacations[0].regions[1].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[0].regions[1].startdate}<br></br>|
+                    <h4>{data.content[0].vacations[0].regions[1].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[0].regions[1].startdate}<br></br>
                     Tot: {data.content[0].vacations[0].regions[1].enddate}<br></br>
                 </Text>
                 <Text>
-                <h4>{data.content[0].vacations[0].regions[2].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[0].regions[2].startdate}<br></br>|
+                <h4>{data.content[0].vacations[0].regions[2].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[0].regions[2].startdate}<br></br>
                     Tot: {data.content[0].vacations[0].regions[2].enddate}<br></br>
                 </Text>
                 </div>
                 <Text >
                 <h2>
-                    {data.content[0].vacations[1].type}
+                    Kerstvakantie
                 </h2>
                 </Text>
 
@@ -90,7 +89,7 @@ useEffect(() => {
                 </div>
                 <Text >
                 <h2>
-                    {data.content[0].vacations[2].type}
+                    Voorjaarsvakantie
                 </h2>
                 </Text>
                 <div className='Voorjaar'>
@@ -100,19 +99,19 @@ useEffect(() => {
                     Tot: {data.content[0].vacations[2].regions[0].enddate}<br></br>
                 </Text>
                 <Text>
-                <h4>{data.content[0].vacations[2].regions[1].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[2].regions[1].startdate}<br></br>|
+                <h4>{data.content[0].vacations[2].regions[1].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[2].regions[1].startdate}<br></br>
                     Tot:{data.content[0].vacations[2].regions[1].enddate}<br></br>
                 </Text>
                 <Text>
-                <h4>{data.content[0].vacations[2].regions[2].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[2].regions[2].startdate}<br></br>|
+                <h4>{data.content[0].vacations[2].regions[2].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[2].regions[2].startdate}<br></br>
                     Tot: {data.content[0].vacations[2].regions[2].enddate}<br></br>
                 </Text>
                 </div>
                 <Text >
                 <h2>
-                    {data.content[0].vacations[3].type}
+                    Meivakantie
                 </h2>
                 </Text>
 
@@ -125,7 +124,7 @@ useEffect(() => {
                 </div>
                 <Text >
                 <h2>
-                    {data.content[0].vacations[4].type}
+                    Zomervakantie
                 </h2>
                 </Text>
                 <div className='Zomer'>
@@ -135,13 +134,13 @@ useEffect(() => {
                     Tot: {data.content[0].vacations[4].regions[0].enddate}<br></br>
                 </Text>
                 <Text>
-                <h4>{data.content[0].vacations[4].regions[1].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[4].regions[1].startdate}<br></br>|
+                <h4>{data.content[0].vacations[4].regions[1].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[4].regions[1].startdate}<br></br>
                     Tot: {data.content[0].vacations[4].regions[1].enddate}<br></br>
                 </Text>
                 <Text>
-                <h4>{data.content[0].vacations[4].regions[2].region}<br></br></h4>|
-                    Vanaf: {data.content[0].vacations[4].regions[2].startdate}<br></br>|
+                <h4>{data.content[0].vacations[4].regions[2].region}<br></br></h4>
+                    Vanaf: {data.content[0].vacations[4].regions[2].startdate}<br></br>
                     Tot: {data.content[0].vacations[4].regions[2].enddate}<br></br>
                 </Text>
                 </div>

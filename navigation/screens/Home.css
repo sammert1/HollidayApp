@@ -1,9 +1,9 @@
 .Data{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16;
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -17,21 +17,25 @@
 .Kerst{
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 .Voorjaar{
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 .Mei{
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 .Zomer{
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 #Herfst{
@@ -68,3 +72,4 @@
     font-size: x-large;
 
 }
+
