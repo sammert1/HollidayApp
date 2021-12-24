@@ -4,7 +4,6 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 
 
-
 export default function DetailsScreen ({navigation}) {
 
 
@@ -54,7 +53,7 @@ useEffect(() => {
         />  
         
 
-        <span> dagen tot:</span> 
+        <span> dagen tot: Herfstvakantie</span> 
         {/* <img src="../../images/herfst" alt="Girl in a jacket" width="500" height="600"/> */}
 
         <br></br><br></br>
@@ -66,7 +65,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[1].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot:</span>
+        <span> dagen tot: Kerstvakantie</span>
         <br></br><br></br>
         </div>
 
@@ -76,7 +75,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[2].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot:</span>
+        <span> dagen tot: Voorjaarsvakantie</span>
         <br></br><br></br>
         </div>
 
@@ -86,7 +85,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[3].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot:</span>
+        <span> dagen tot: Meivakantie</span>
         <br></br><br></br>
         </div>
 
@@ -96,7 +95,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[4].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot:</span>
+        <span> dagen tot: Zomervakantie</span>
         </div>
 
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
