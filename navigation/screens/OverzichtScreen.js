@@ -1,7 +1,9 @@
-import { View, Text } from 'react-native';
+import { View, Image, StyleSheet, Text } from 'react-native';
 import Countdown from 'react-countdown'
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
+// import herfst from '../../assets/herfst.png';
+
 
 
 export default function DetailsScreen ({navigation}) {
@@ -42,17 +44,21 @@ useEffect(() => {
     return(
 
       <div>
+        
         {loading && <p>Loading</p>}
         {error && <p>er is een error opgetreden bij het ophalen van de data</p>}
         {data && <>
-
             <div id="Herfst">
         <span>Nog </span>
         <Countdown 
             date={new Date(data.content[0].vacations[0].regions[0].startdate).getTime()}
         />  
+        <Image source={require('../../assets/herfst.png')} />
         
-        <span> dagen tot:</span>
+
+        <span> dagen tot:</span> 
+        {/* <img src="../../images/herfst" alt="Girl in a jacket" width="500" height="600"/> */}
+
         <br></br><br></br>
         </div>
 
@@ -103,6 +109,7 @@ useEffect(() => {
         </View>
         </>
         }
+        
         </div>
 
     );

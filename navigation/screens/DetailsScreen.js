@@ -37,6 +37,7 @@ useEffect(() => {
 }, [endpoint]);
 
     return(
+      
         <div>
          {loading && <p>Loading</p>}
          {error && <p>er is een error opgetreden bij het ophalen van de data</p>}
