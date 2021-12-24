@@ -9,14 +9,12 @@ import { View, Image, StyleSheet, Text } from 'react-native';
 import '../navigation/screens/Home.css';
 import HomeScreen from './screens/HomeScreen'
 import OverzichtScreen from './screens/OverzichtScreen'
-import SettingsScreen from './screens/SettingsScreen'
-import DetailsScreen from './screens/DetailsScreen'
+import AboutScreen from './screens/DetailsScreen'
 
 // Screen names
 const homeName = 'Home';
 const overzichtName = 'Overzicht';
-const settingsName = 'Settings';
-const detailsName = 'Details';
+const aboutName = 'About';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,22 +34,20 @@ export default function MainContainer () {
                         iconName = focused ? 'home': 'home-outline';
                     } else if (rn === overzichtName) {
                         iconName = focused ? 'overzicht': 'overzicht-outline';    
-                    } else if (rn === detailsName) {
+                    } else if (rn === aboutName) {
                         iconName = focused ? 'list': 'list-outline';
-                    } else if (rn === settingsName) {
-                        iconName = focused ? 'settings': 'settings-outline';
                     }
+
                     
 
                     return <Ionicons name={iconName} size={size} color={color}/>
-
+                    
                 },
             })}>
             
             <Tab.Screen name={homeName} component={HomeScreen}/>
             <Tab.Screen name={overzichtName} component={OverzichtScreen}/>
-            <Tab.Screen name={detailsName} component={DetailsScreen}/>
-            <Tab.Screen name={settingsName} component={SettingsScreen}/>
+            <Tab.Screen name={aboutName} component={AboutScreen}/>
             
 
                 

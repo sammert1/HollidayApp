@@ -54,7 +54,6 @@ useEffect(() => {
         
 
         <span> dagen tot: Herfstvakantie</span> 
-        {/* <img src="../../images/herfst" alt="Girl in a jacket" width="500" height="600"/> */}
 
         <br></br><br></br>
         </div>
