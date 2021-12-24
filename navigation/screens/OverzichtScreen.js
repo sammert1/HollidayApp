@@ -1,7 +1,12 @@
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, ScrollView, StyleSheet, Text } from 'react-native';
 import Countdown from 'react-countdown'
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
+import herfst from '../../image/herfst.png';
+import kerst from '../../image/kerst.png'
+import voorjaar from '../../image/voorjaar.png';
+import mei from '../../image/mei.png';
+import zomer from '../../image/zomer.png';
 
 
 export default function DetailsScreen ({navigation}) {
@@ -40,7 +45,7 @@ useEffect(() => {
 
 
     return(
-
+  <ScrollView style={{ marginTop: 35, marginBottom: 35 }}>
       <div>
         
         {loading && <p>Loading</p>}
@@ -53,7 +58,7 @@ useEffect(() => {
         />  
         
 
-        <span> dagen tot: Herfstvakantie</span> 
+        <span> dagen tot: </span><img src={herfst} alt="Herfst" width="200" height="150"/>
 
         <br></br><br></br>
         </div>
@@ -64,7 +69,8 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[1].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot: Kerstvakantie</span>
+        <span> dagen tot: </span> <img src={kerst} alt="Kerst" width="200" height="150"/>
+
         <br></br><br></br>
         </div>
 
@@ -74,7 +80,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[2].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot: Voorjaarsvakantie</span>
+        <span> dagen tot: </span><img src={voorjaar} alt="Voorjaar" width="200" height="150"/>
         <br></br><br></br>
         </div>
 
@@ -84,7 +90,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[3].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot: Meivakantie</span>
+        <span> dagen tot: </span><img src={mei} alt="Mei" width="200" height="150"/>
         <br></br><br></br>
         </div>
 
@@ -94,7 +100,7 @@ useEffect(() => {
             date={new Date(data.content[0].vacations[4].regions[0].startdate).getTime()}
         />  
         
-        <span> dagen tot: Zomervakantie</span>
+        <span> dagen tot: </span><img src={zomer} alt="Zomer" width="200" height="150"/>
         </div>
 
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -107,6 +113,6 @@ useEffect(() => {
         }
         
         </div>
-
+        </ScrollView>
     );
 }

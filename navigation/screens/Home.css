@@ -40,37 +40,52 @@
 
 #Herfst{
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    display: flex;
+    align-items: center;
     font-size: x-large;
+    gap: 1em;
 
 }
 
 #Kerst{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: x-large;
+    flex-direction: row;
+    gap: 1em;
 
 }
 
 #Voorjaar{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: x-large;
-
+    flex-direction: row;
+    gap: 1em;
 }
 
 #Mei{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: x-large;
-
+    flex-direction: row;
+    gap: 1em;
 }
 
 #Zomer{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: x-large;
-
+    flex-direction: row;
+    gap: 1em;
 }
 
 #copy {
